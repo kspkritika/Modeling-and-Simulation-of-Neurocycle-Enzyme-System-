@@ -17,18 +17,27 @@
 % s_12 profile and phase plot for 0 <= t <= Tend
 
 % De IVP solver
+
 thet1=32000; thet2=4; thet3=0.125; thet4=0.125; thet5=84500; thet6=65;
 thet7=76.72; thet8=0.00769; al=0.5; ga=0.01; del=0.1; VR=1.2;
 a11=1; a12=0; a21=1; a22=-1; a31=1; a32=0; a41=0; a42=1; b1=1; b2=VR;
 alHp=2.25; alHm=0.5; alS1=1; alS2=1; alS3=1; B1=5.033*10^-5; B2=5.033*10^-5;
 Kh1=1.0066*10^-6; Ks1=5.033*10^-7; S2ref=0.0001; S3ref=0.000001;
 s1f=2.4; s2f=1.15; s3f=3.9;hf = 0.004544;
+
 Tend = 20;
+
 y0 = [0.09594; 1.27; 1.155; 4.405; 0.7; 0.2; 1.16; 4.8];
+
 tspan = [0 Tend]; 
+
 options = odeset('RelTol',10^-6,'AbsTol',10^-7,'Vectorized','on');
+
 [t,y] = ode15s(@FjPsi,tspan,y0,options,hf); % using DE integrator ode...
  clf, subplot(4,2,1) 
+ 
+ 
+ 
  plot(t,y(:,1),'b'), v = axis;
  xlabel('t','FontSize',11); ylabel('h_1' ,'FontSize',12,'Rotation',0);
  title('Hydrogen ion concentration in (I)','FontSize',12);
