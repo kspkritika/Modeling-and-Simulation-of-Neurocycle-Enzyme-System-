@@ -4,10 +4,7 @@
 % Tend = end of time interval for integration
 % y0 = initial value column vector,
 % with entries for h_1, s_11, s_21, s_31, h_2, s_12, s_22, s_32
-% S = color choice for graphs, such as ’r’ for red, ’g’ for green etc
-
-% standard : if "standard" is set to 1, we use the standard initial
-% values from the book (section 4.4);
+% S = color choice for graphs, such as â€™râ€™ for red, â€™gâ€™ for green etc
 % if "standard" is set different from 1, we use special
 % initial values and annotate the graphs differently.
 % Output: Three different plots are obtainable by (un)commenting :
@@ -18,8 +15,7 @@
 % after limit cycle has been reached (for t >= 0.4 * Tend)
 % Third plotting block active:
 % s_12 profile and phase plot for 0 <= t <= Tend
-% Use the MATLAB text editor ("Text" help button) to (un)comment the
-% three plotting blocks so that ONLY ONE is active.
+
 % De IVP solver
 thet1=32000; thet2=4; thet3=0.125; thet4=0.125; thet5=84500; thet6=65;
 thet7=76.72; thet8=0.00769; al=0.5; ga=0.01; del=0.1; VR=1.2;
